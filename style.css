@@ -128,3 +128,117 @@ footer {
   border-top: 1px solid #edf2f7;
   margin-top: 40px;
 }
+/* รีเซ็ตพื้นฐาน */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ฟอนต์หลัก — รองรับภาษาไทย */
+body {
+  font-family: 'Sarabun', 'TH Sarabun New', Tahoma, sans-serif;
+  background-color: #f9fafc;
+  color: #2d3748;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* ส่วนหัว */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 20px 0;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #6c757d;
+}
+
+/* โครงข่ายงาน */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* การ์ดงาน */
+.work-card {
+  display: block;
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.work-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+.work-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.work-card h2 {
+  font-size: 1.4rem;
+  margin: 18px 16px 10px;
+  color: #2c3e50;
+}
+
+.work-card p {
+  font-size: 1rem;
+  color: #5a6268;
+  margin: 0 16px 16px;
+}
+
+/* ป้าย "ล่าสุด" */
+.badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: #e53e3e;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: bold;
+  padding: 4px 12px;
+  border-radius: 20px;
+  z-index: 2;
+}
+
+/* ส่วนท้าย */
+footer {
+  text-align: center;
+  margin-top: 60px;
+  padding: 20px;
+  color: #718096;
+  font-size: 1rem;
+  border-top: 1px solid #eaeaea;
+}
+
+/* รองรับมือถือ */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  .work-card h2 {
+    font-size: 1.25rem;
+  }
+}
