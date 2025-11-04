@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <title>Work 3 - Noppakao Maneechai</title>
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.26.1/full/pyodide.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      max-width: 950px;
+      margin: 40px auto;
+      padding: 30px;
+      background: linear-gradient(135deg, #f0f4fd 0%, #d0ccff 100%);
+      color: #2c3333;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.08);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      color: #2922e6;
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      color: #34495e;
+      margin-top: 30px;
+      border-left: 4px solid #222fe6;
+      padding-left: 10px;
+    }
+
+    p {
+      text-align: center;
+      font-size: 1.1em;
+      margin-top: 0;
+      color: #555;
+    }
+
+    /* 🌟 ปุ่ม HOME สวย ๆ มีแสง + แอนิเมชัน */
+    .home-btn {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 12px 28px;
+      font-size: 17px;
+      font-weight: bold;
+      color: #fff;
+      background: linear-gradient(90deg, #007bff, #0056ff);
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(0,123,255,0.6);
+      text-decoration: none;
+      transition: all 0.25s ease-in-out;
+      animation: glowPulse 2s infinite alternate;
+    }
+
+    .home-btn:hover {
+      transform: scale(1.08);
+      background: linear-gradient(90deg, #0056ff, #00aaff);
+      box-shadow: 0 0 25px rgba(0,123,255,0.9), 0 0 45px rgba(0,123,255,0.5);
+    }
+
+    @keyframes glowPulse {
+      from { box-shadow: 0 0 10px rgba(0,123,255,0.4); }
+      to { box-shadow: 0 0 25px rgba(0,123,255,0.9); }
+    }
+
+    .code-box {
+      background: #1e1e1e;
+      color: #dcdcdc;
+      padding: 18px;
+      border-radius: 10px;
+      font-family: 'Consolas', monospace;
+      white-space: pre;
+      overflow-x: auto;
+      font-size: 0.95em;
+      box-shadow: inset 0 0 8px rgba(0,0,0,0.3);
+    }
+
+    .output {
+      background: #0b132b;
+      color: #00e0ff;
+      border: 1px solid #1f4068;
+      padding: 18px;
+      margin-top: 20px;
+      border-radius: 8px;
+      font-family: 'Consolas', monospace;
+      white-space: pre-wrap;
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.4);
+      min-height: 80px;
+    }
+
+    button {
+      display: block;
+      margin: 20px auto;
+      background: linear-gradient(90deg, #3498db, #2980b9);
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.2s ease-in-out;
+      box-shadow: 0 4px 10px rgba(52,152,219,0.3);
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      background: linear-gradient(90deg, #2980b9, #3498db);
+      box-shadow: 0 6px 14px rgba(52,152,219,0.5);
+    }
+
+    .info {
+      background: #d9ddff;
+      padding: 14px;
+      border-radius: 8px;
+      font-size: 0.95em;
+      color: #00377f;
+      margin-top: 25px;
+      box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      text-align: center;
+      color: #aaa;
+      font-size: 0.9em;
+      margin-top: 25px;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="index.html" class="home-btn"> HOME</a>
+
+  <h1>Worksheet 3: Comments, Variables, Data Types</h1>
+  <p><strong>By:</strong> <em>Noppakao Maneechai | คม.68/1</em></p>
+
+  <h2>Python Code:</h2>
+  <div class="code-box" id="codeDisplay"></div>
+
+  <button onclick="runPythonCode()">▶️ Run Code in Browser</button>
+
+  <div class="output" id="output">Output will appear here...</div>
+
+  <div class="info">
+    💡 หมายเหตุ: การจำลองการทำงานของ Python ในเบราว์เซอร์  
+    ไม่ต้องติดตั้ง Python บนเครื่อง — เหมาะสำหรับการทดลองโค้ดสั้น ๆ  
+    <br> ใช้งานได้ทั้งในคอมและมือถือ
+  </div>
+
+  <footer>
+    © 2025 | Worksheet 3 - Created by <strong>Noppakao Maneechai</strong>
+  </footer>
+
+  <script>
+    const pythonCode = `
+# Worksheet 3: Comments, Variables, Data Types
+# By Noppakao Maneechai | คม.68/1
+
+print("-------------")
+print("Creating Variables")
+x = 5
+y = "Noppakao Maneechai | คม.68/1"
+print(x)
+print(y)
+
+x = int(4)
+x = str("salty")
+print(x)
+
+print("15---------------")
+print("Casting")
+
+x = str(3)
+print(x + '7')  # Output: "37"
+
+y = int(3)
+z = float(3)
+
+# Valid variable naming examples (English only)
+myvar = "Noppakao"
+my_var = "Noppakao"
+_my_var = "Noppakao"
+myVar = "Noppakao"
+MYVAR = "Noppakao"
+myvar2 = "Noppakao"
+
+print(myvar)
+print(my_var)
+print(_my_var)
+print(myVar)
+print(MYVAR)
+print(myvar2)
+
+# Assign multiple values
+fruits = ["apple", "banana", "cherry"]
+x, y, z = fruits
+print(x)  # apple
+print(y)  # banana
+print(z)  # cherry
+
+# Output variables
+x = 5
+y = "Hello, Noppakao Maneechai | คม.68/1"
+z = x * 3
+k = "Age" + str(17)
+
+print(y)
+print(k)
+print(z)
+
+# Global and local variables
+x = "awesome"
+
+def myfunc(myvar="Noppakao"):
+    x = "fantastic"
+    y = "very good"
+    print("Python is " + x)
+    print("Python is " + y)
+
+myfunc()
+
+print("Python is " + x)
+`.trim();
+
+    document.getElementById("codeDisplay").textContent = pythonCode;
+
+    async function runPythonCode() {
+      const outputDiv = document.getElementById("output");
+      outputDiv.textContent = "⏳ Loading Python environment...";
+
+      try {
+        let pyodide = await loadPyodide();
+        outputDiv.textContent = "▶️ Running code...\n\n";
+
+        const wrappedCode = `
+import sys
+from io import StringIO
+
+old_stdout = sys.stdout
+sys.stdout = mystdout = StringIO()
+
+try:
+${pythonCode.split('\n').map(line => '    ' + line).join('\n')}
+except Exception as e:
+    print("❌ Error:", e)
+
+sys.stdout = old_stdout
+result = mystdout.getvalue()
+`;
+
+        pyodide.runPython(wrappedCode);
+        const result = pyodide.globals.get("result");
+        const now = new Date().toLocaleTimeString();
+        outputDiv.textContent = result + "\\n🕒 Last run: " + now;
+      } catch (err) {
+        outputDiv.textContent = "❌ Error: " + err.message;
+      }
+    }
+  </script>
+</body>
+</html>
