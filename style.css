@@ -292,7 +292,7 @@ header.pygame-download p {
 }
 
 .about.download-guide h2::before {
-  content: "⚠️";
+  content: "";
   font-size: 1.2rem;
 }
 
@@ -389,7 +389,7 @@ header.pygame-download p {
 }
 
 .credit-box h2::before {
-  content: "⭐";
+  content: "";
   font-size: 1.2rem;
 }
 
@@ -430,3 +430,4 @@ header.pygame-download p {
     font-size: 2rem;
   }
 }
+
