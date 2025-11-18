@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>noppakao - วิธีติดตั้งหลังดาวน์โหลด</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="pygame-download">
+  <header class="pygame-download">
+    <div class="home-button-container">
+      <a href="index.html" class="home-button">🏠 หน้าแรก</a>
+    </div>
+    <h1>📘 วิธีติดตั้งหลังดาวน์โหลด</h1>
+    <p>ทำตามขั้นตอนง่ายๆ นี้ เพื่อติดตั้งและรันเกมได้ทันที!</p>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <!-- ขั้นตอนที่ 1: ดาวน์โหลด -->
+      <div class="about download-guide">
+        <h2>1. ดาวน์โหลดไฟล์ให้ครบ</h2>
+        <p>ตรวจสอบว่าคุณได้ดาวน์โหลดไฟล์ต่อไปนี้แล้ว:</p>
+        <ul>
+          <li>เกม: <code>simple_game.py</code></li>
+          <li>(ถ้ามี) รูปหรือเสียงประกอบ: โฟลเดอร์ <code>assets/</code></li>
+        </ul>
+        <div class="install-image-placeholder">
+          <!-- คุณสามารถแทนที่ src ด้วยรูปจริงของคุณ -->
+          <img src="https://via.placeholder.com/600x300/e0e0e0/666666?text=รูป+ดาวน์โหลด+ไฟล์" alt="ดาวน์โหลดไฟล์" />
+        </div>
+      </div>
+
+      <!-- ขั้นตอนที่ 2: เปิด Command Prompt -->
+      <div class="about download-guide">
+        <h2>2. เปิด Command Prompt</h2>
+        <p>กดปุ่ม <strong>Windows + R</strong> → พิมพ์ <code>cmd</code> → กด Enter</p>
+        <div class="install-image-placeholder">
+          <img src="https://via.placeholder.com/600x300/e0e0e0/666666?text=เปิด+Command+Prompt" alt="เปิด Command Prompt" />
+        </div>
+      </div>
+
+      <!-- ขั้นตอนที่ 3: ติดตั้ง pygame -->
+      <div class="about download-guide">
+        <h2>3. ติดตั้ง pygame (ถ้ายังไม่ได้ติดตั้ง)</h2>
+        <p>พิมพ์คำสั่งต่อไปนี้ใน Command Prompt:</p>
+        <pre><code>pip install pygame</code></pre>
+        <div class="install-image-placeholder">
+          <img src="https://via.placeholder.com/600x300/e0e0e0/666666?text=ติดตั้ง+pygame" alt="ติดตั้ง pygame" />
+        </div>
+      </div>
+
+      <!-- ขั้นตอนที่ 4: รันเกม -->
+      <div class="about download-guide">
+        <h2>4. รันเกม</h2>
+        <p>ไปที่โฟลเดอร์ที่เก็บไฟล์เกม (ใช้คำสั่ง <code>cd</code>) แล้วพิมพ์:</p>
+        <pre><code>python simple_game.py</code></pre>
+        <p>เกมจะเปิดขึ้นทันที! 🎮</p>
+        <div class="install-image-placeholder">
+          <img src="https://via.placeholder.com/600x300/e0e0e0/666666?text=รัน+เกม+ใน+cmd" alt="รันเกม" />
+        </div>
+      </div>
+
+      <!-- เคล็ดลับ -->
+      <div class="credit-box">
+        <h2>💡 เคล็ดลับจาก noppakao</h2>
+        <p>• ถ้าใช้ Windows และมีหลายเวอร์ชัน Python — อาจต้องใช้ <code>py simple_game.py</code> แทน</p>
+        <p>• อย่าลืมตรวจสอบว่า Python อยู่ใน PATH — ใช้ไฟล์ <code>Python_Path_Setup_by_noppakao.exe</code> ช่วยได้!</p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>จัดทำโดย: Noppakao Maneechai | Khon Kaen Vocational Education College.</p>
+  </footer>
+
+  <!-- CSS สำหรับหน้านี้ -->
+  <style>
+    /* เพิ่มเฉพาะส่วนที่ไม่มีใน style.css */
+    .install-image-placeholder img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 10px;
+      margin: 12px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    pre {
+      background: #f8f9fa;
+      padding: 12px;
+      border-radius: 8px;
+      border-left: 4px solid #4a90e2;
+      overflow-x: auto;
+      font-family: Consolas, 'Courier New', monospace;
+      font-size: 1.1rem;
+      color: #2d3748;
+    }
+
+    code {
+      font-family: Consolas, 'Courier New', monospace;
+      background: #f1f3f5;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+  </style>
+</body>
+</html>
