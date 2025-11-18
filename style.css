@@ -430,4 +430,58 @@ header.pygame-download p {
     font-size: 2rem;
   }
 }
+/* === ปุ่ม Home ทุกหน้า === */
+.home-button-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+.home-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #fff;
+  color: #4a6fa6;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  transition: all 0.25s ease;
+  border: 2px solid #eaeaea;
+}
+
+.home-button:hover {
+  background: #4a6fa6;
+  color: white;
+  border-color: #4a6fa6;
+  box-shadow: 0 4px 12px rgba(74, 111, 166, 0.25);
+  transform: translateY(-2px);
+}
+
+/* ปรับเล็กน้อยเมื่ออยู่ใน header แบบมีพื้นหลัง */
+header.pygame-download .home-button {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+header.pygame-download .home-button:hover {
+  background: white;
+  color: #4a6fa6;
+}
+
+/* รองรับมือถือ */
+@media (max-width: 600px) {
+  .home-button-container {
+    top: 12px;
+    right: 12px;
+  }
+
+  .home-button {
+    padding: 6px 14px;
+    font-size: 0.9rem;
+  }
+}
 
