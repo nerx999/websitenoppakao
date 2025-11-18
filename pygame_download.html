@@ -7,8 +7,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <header>
+<body class="pygame-download"> <!-- ⬅️ เพิ่ม class นี้ -->
+  <header class="pygame-download"> <!-- ⬅️ เพิ่ม class นี้ -->
     <h1> ดาวน์โหลด Pygame สำหรับ Windows</h1>
     <p>พร้อมวิธีติดตั้งง่ายๆ ไม่ต้องเข้าเว็บหลายรอบ</p>
   </header>
@@ -16,8 +16,8 @@
   <main>
     <div class="container">
       <!-- คำแนะนำ -->
-      <div class="about">
-        <h2>⚠️ ข้อควรระวังก่อนดาวน์โหลด</h2>
+      <div class="about download-guide"> <!-- ⬅️ แก้จาก .about เป็น .about.download-guide -->
+        <h2>ข้อควรระวังก่อนดาวน์โหลด</h2>
         <p>กรุณาเลือกไฟล์ที่ตรงกับเวอร์ชัน Python ที่คุณใช้อยู่ เช่น:</p>
         <ul>
           <li>Python 3.7 → ใช้ไฟล์ที่ลงท้ายด้วย <code>py3.7</code></li>
@@ -29,55 +29,55 @@
 
       <!-- ลิงก์ดาวน์โหลด -->
       <div class="work-grid">
-        <a href="downloads/pygame-1.9.1.win32-py2.7.msi" class="work-card">
-          <img src="https://via.placeholder.com/300x180/4a90e2/ffffff?text=Pygame+2.7" alt="pygame-1.9.1.win32-py2.7.msi" />
+        <a href="downloads/pygame-1.9.1.win32-py2.7.msi" class="work-card download-item"> <!-- ⬅️ เพิ่ม class download-item -->
+          <img src="https://via.placeholder.com/300x120/4a90e2/ffffff?text=Pygame+2.7" alt="pygame-1.9.1.win32-py2.7.msi" />
           <h2>pygame-1.9.1.win32-py2.7.msi</h2>
           <p>ขนาด: 3MB | เหมาะกับ Python 2.7</p>
         </a>
 
-        <a href="downloads/pygame-1.9.1.release.win32-py2.5.exe" class="work-card">
-          <img src="https://via.placeholder.com/300x180/e94b3c/ffffff?text=Pygame+2.5" alt="pygame-1.9.1.release.win32-py2.5.exe" />
+        <a href="downloads/pygame-1.9.1.release.win32-py2.5.exe" class="work-card download-item">
+          <img src="https://via.placeholder.com/300x120/e94b3c/ffffff?text=Pygame+2.5" alt="pygame-1.9.1.release.win32-py2.5.exe" />
           <h2>pygame-1.9.1.release.win32-py2.5.exe</h2>
           <p>ขนาด: 3MB | เหมาะกับ Python 2.5</p>
         </a>
 
-        <a href="downloads/pygame-1.9.1.win32-py2.6.msi" class="work-card">
-          <img src="https://via.placeholder.com/300x180/6a8fc9/ffffff?text=Pygame+2.6" alt="pygame-1.9.1.win32-py2.6.msi" />
+        <a href="downloads/pygame-1.9.1.win32-py2.6.msi" class="work-card download-item">
+          <img src="https://via.placeholder.com/300x120/6a8fc9/ffffff?text=Pygame+2.6" alt="pygame-1.9.1.win32-py2.6.msi" />
           <h2>pygame-1.9.1.win32-py2.6.msi</h2>
           <p>ขนาด: 3MB | เหมาะกับ Python 2.6</p>
         </a>
 
-        <a href="downloads/pygame-1.9.2a0.win32-py2.7.msi" class="work-card">
-          <img src="https://via.placeholder.com/300x180/2ecc71/ffffff?text=Pygame+2.7" alt="pygame-1.9.2a0.win32-py2.7.msi" />
+        <a href="downloads/pygame-1.9.2a0.win32-py2.7.msi" class="work-card download-item">
+          <img src="https://via.placeholder.com/300x120/2ecc71/ffffff?text=Pygame+2.7" alt="pygame-1.9.2a0.win32-py2.7.msi" />
           <h2>pygame-1.9.2a0.win32-py2.7.msi</h2>
           <p>ขนาด: 6.4MB | เวอร์ชันใหม่กว่าสำหรับ Python 2.7</p>
         </a>
 
-        <a href="downloads/pygame-1.9.2a0.win32-py3.1.msi" class="work-card">
-          <img src="https://via.placeholder.com/300x180/f39c12/ffffff?text=Pygame+3.1" alt="pygame-1.9.2a0.win32-py3.1.msi" />
+        <a href="downloads/pygame-1.9.2a0.win32-py3.1.msi" class="work-card download-item">
+          <img src="https://via.placeholder.com/300x120/f39c12/ffffff?text=Pygame+3.1" alt="pygame-1.9.2a0.win32-py3.1.msi" />
           <h2>pygame-1.9.2a0.win32-py3.1.msi</h2>
           <p>ขนาด: 6.4MB | เหมาะกับ Python 3.1</p>
         </a>
 
-        <a href="downloads/pygame-1.9.2a0.win32-py3.2.msi" class="work-card">
-          <img src="https://via.placeholder.com/300x180/9b59b6/ffffff?text=Pygame+3.2" alt="pygame-1.9.2a0.win32-py3.2.msi" />
+        <a href="downloads/pygame-1.9.2a0.win32-py3.2.msi" class="work-card download-item">
+          <img src="https://via.placeholder.com/300x120/9b59b6/ffffff?text=Pygame+3.2" alt="pygame-1.9.2a0.win32-py3.2.msi" />
           <h2>pygame-1.9.2a0.win32-py3.2.msi</h2>
           <p>ขนาด: 6.4MB | เหมาะกับ Python 3.2</p>
         </a>
       </div>
 
-      <!-- ข้อความเสริม (optional) -->
-      <div class="about">
-        <h2> หมายเหตุเพิ่มเติม</h2>
+      <!-- ข้อความเสริม -->
+      <div class="about download-guide">
+        <h2>หมายเหตุเพิ่มเติม</h2>
         <p>• สำหรับ Windows 64-bit: ให้ใช้เวอร์ชัน 32-bit แทน (เพราะ pygame ยังไม่มีเวอร์ชัน 64-bit อย่างเป็นทางการ)</p>
         <p>• ถ้าต้องการ Numeric สำหรับ Python 2.5 ให้ดาวน์โหลดเพิ่มเติมจาก <a href="#" style="color:#4a90e2">ลิงก์นี้</a> (ไม่จำเป็นสำหรับ Python 3.x)</p>
       </div>
 
       <!-- เครดิต -->
-      <div class="about">
-        <h2> ceadit</h2>
+      <div class="credit-box"> <!-- ⬅️ ใช้ class ใหม่ -->
+        <h2>เครดิต</h2>
         <p>ไฟล์ Pygame นี้จัดเตรียมโดย: <strong>pygame.org</strong></p>
-        <p>เว็บไซต์ทางการ: <a href="https://www.pygame.org/" target="_blank" style="color:#4a90e2">https://www.pygame.org/</a></p>
+        <p>เว็บไซต์ทางการ: <a href="https://www.pygame.org/" target="_blank">https://www.pygame.org/</a></p>
         <p>เว็บนี้จัดทำโดย: <strong>Noppakao Maneechai</strong> เพื่อใช้ในการเรียนวิชาคอมพิวเตอร์</p>
       </div>
     </div>
