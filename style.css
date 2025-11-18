@@ -242,3 +242,24 @@ footer {
     font-size: 1.25rem;
   }
 }
+
+/* === สไตล์เฉพาะหน้า download === */
+.about ul {
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+.about li {
+  margin-bottom: 8px;
+  color: #4a5568;
+}
+
+.about a {
+  color: #4a90e2;
+  text-decoration: underline;
+}
+
+.about a:hover {
+  color: #2c3e50;
+}
+
