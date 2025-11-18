@@ -243,23 +243,185 @@ footer {
   }
 }
 
-/* === สไตล์เฉพาะหน้า download === */
-.about ul {
+/* === สไตล์เฉพาะหน้า pygame_download.html === */
+
+/* พื้นหลังเฉพาะหน้านี้ */
+body.pygame-download {
+  background: linear-gradient(135deg, #f0f4f8, #e6f2ff);
+  padding: 0;
+}
+
+/* หัวเรื่องหน้า download */
+header.pygame-download {
+  background: linear-gradient(135deg, #4a6fa6, #6a8fc9);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+header.pygame-download h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+header.pygame-download p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.95;
+}
+
+/* กล่องคำแนะนำ (About) */
+.about.download-guide {
+  background: white;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin: 20px 0;
+  border-left: 5px solid #4a90e2;
+}
+
+.about.download-guide h2 {
+  color: #2c3e50;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.about.download-guide h2::before {
+  content: "⚠️";
+  font-size: 1.2rem;
+}
+
+.about.download-guide ul {
   padding-left: 20px;
   margin: 10px 0;
 }
 
-.about li {
+.about.download-guide li {
   margin-bottom: 8px;
+  color: #4a5568;
+  position: relative;
+  padding-left: 12px;
+}
+
+.about.download-guide li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #4a90e2;
+  font-weight: bold;
+}
+
+/* การ์ดดาวน์โหลด (ปรับให้ดูเหมือนปุ่ม) */
+.work-card.download-item {
+  background: white;
+  border: 2px solid #eaeaea;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.work-card.download-item:hover {
+  border-color: #4a90e2;
+  background: #f0f7ff;
+  transform: translateY(-2px);
+}
+
+.work-card.download-item img {
+  height: 120px;
+  background: #f8fafc;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.work-card.download-item h2 {
+  font-size: 1.25rem;
+  margin: 12px 16px 8px;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.work-card.download-item p {
+  font-size: 0.95rem;
+  color: #5a6268;
+  margin: 0 16px 16px;
+  background: #f8fafc;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border-left: 3px solid #4a90e2;
+}
+
+/* ปุ่มดาวน์โหลด (ถ้าอยากให้คลิกง่ายขึ้น) */
+.work-card.download-item::after {
+  content: "⬇️ คลิกเพื่อดาวน์โหลด";
+  position: absolute;
+  bottom: 12px;
+  right: 16px;
+  background: #4a90e2;
+  color: white;
+  font-size: 0.85rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.work-card.download-item:hover::after {
+  background: #2c3e50;
+}
+
+/* ข้อความเครดิต */
+.credit-box {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 30px;
+  border: 1px dashed #4a90e2;
+}
+
+.credit-box h2 {
+  color: #2c3e50;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.credit-box h2::before {
+  content: "⭐";
+  font-size: 1.2rem;
+}
+
+.credit-box p {
+  margin: 8px 0;
   color: #4a5568;
 }
 
-.about a {
+.credit-box a {
   color: #4a90e2;
-  text-decoration: underline;
+  text-decoration: none;
+  font-weight: 600;
 }
 
-.about a:hover {
+.credit-box a:hover {
+  text-decoration: underline;
   color: #2c3e50;
 }
 
+/* รองรับมือถือ */
+@media (max-width: 600px) {
+  .work-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  header.pygame-download h1 {
+    font-size: 2rem;
+  }
+
+  .about.download-guide {
+    padding: 16px;
+  }
+}
