@@ -395,7 +395,7 @@ header.pygame-download p {
 
 .credit-box p {
   margin: 8px 0;
-  color: #4a5568;
+  color: #FFFFFF;
 }
 
 .credit-box a {
@@ -484,4 +484,5 @@ header.pygame-download .home-button:hover {
     font-size: 0.9rem;
   }
 }
+
 
