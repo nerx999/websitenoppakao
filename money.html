@@ -6,6 +6,7 @@
   <title>โปรแกรมแลกเงิน (by Noppakao)</title>
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
+    /* ===== สไตล์เดิม (ไม่เปลี่ยน) ===== */
     * {
       margin: 0;
       padding: 0;
@@ -20,6 +21,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      position: relative; /* เพื่อให้ปุ่มลอย absolute ได้ */
     }
 
     .container {
@@ -138,22 +140,73 @@
       .label {
         margin-bottom: 8px;
       }
-      .home-button-container {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        z-index: 20;
-      }
+    }
 
+    /* ===== สไตล์ใหม่: ปุ่ม Home สวยๆ ===== */
+    .home-button-container {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 10;
+    }
+
+    .home-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: white;
+      color: #1976d2;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: all 0.3s ease;
+      border: 2px solid #e3f2fd;
+    }
+
+    .home-button:hover {
+      background: #1976d2;
+      color: white;
+      transform: scale(1.1) rotate(5deg);
+      box-shadow: 0 6px 16px rgba(25, 118, 210, 0.4);
+    }
+
+    .home-button::before {
+      content: "🏠";
+      font-size: 20px;
+    }
+
+    /* เพิ่ม tooltip เล็กๆ (ไม่บังคับ แต่ดูดี) */
+    .home-button::after {
+      content: "หน้าหลัก";
+      position: absolute;
+      top: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0,0,0,0.7);
+      color: white;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+
+    .home-button:hover::after {
+      opacity: 1;
     }
   </style>
-
-  <div class="home-button-container">
-    <a href="index.html" class="home-button">home</a>
-  </div>
-  
 </head>
 <body>
+  <!-- ✅ ปุ่ม Home อยู่ตรงนี้ (ใน body) -->
+  <div class="home-button-container">
+    <a href="index.html" class="home-button" aria-label="กลับสู่หน้าหลัก"></a>
+  </div>
+
   <div class="container">
     <header>
       <h1>โปรแกรมหาค่าเงินรวม</h1>
@@ -228,7 +281,6 @@
       }
     }
 
-    // เพิ่มลูกเล่น: กด Enter แล้วคำนวณได้
     document.querySelectorAll('.input-field').forEach(input => {
       input.addEventListener('keyup', (e) => {
         if (e.key === 'Enter') calculate();
